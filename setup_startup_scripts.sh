@@ -32,8 +32,26 @@ if [[ $response == y || $response == yes ]]; then
 [push]
 	default = simple
 [color]
-  ui = true" >> $CONFIG_PATH/gitconfig
+	ui = true
+[color \"diff-highlight\"]
+	oldNormal = red bold
+	oldHighlight = red bold 52
+	newNormal = green bold
+	newHighlight = green bold 22
+[color \"diff\"]
+	commit = green
+	meta = yellow
+	frag = cyan
+	old = red
+	new = green
+	whitespace = red reverse" >> $CONFIG_PATH/gitconfig
     echo -e "[include]\n  path = $CONFIG_PATH/gitconfig" >> $HOME/.gitconfig
+
+  	if [ ! -f $HOME/.ssh/id_rsa ]; then
+    	ssh-keygen -t rsa -b 4096 -C "$GIT_EMAIL"
+    	ssh-add ~/.ssh/id_rsa
+  	fi
+  	echo Please add id_rsa.pub to your GitHub keys
   fi
 
 fi
