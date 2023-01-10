@@ -16,3 +16,5 @@ sudo apt install -y python3-pip
 sudo apt install -y cargo
 
 sudo apt-get install -y cscope
+
+sudo apt-get install -y cmake
