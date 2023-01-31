@@ -9,7 +9,7 @@ git clone https://github.com/qemu/qemu.git
 # Switch to the QEMU root directory.
 cd qemu
 # Change version
-git checkout v7.2.0-rc4
+git checkout v7.2.0
 
 # Prepare a native debug build.
 mkdir -p bin/debug/native
