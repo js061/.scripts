@@ -14,7 +14,7 @@ git clone https://github.com/qemu/qemu.git
 # Switch to the QEMU root directory.
 cd qemu
 # Change version
-git checkout v7.2.0
+git checkout v8.0.2
 
 # Prepare a native debug build.
 #mkdir -p bin/debug/native
@@ -27,5 +27,5 @@ git checkout v7.2.0
 
 # Configure QEMU for x86_64 only - faster build
 ./configure --target-list=x86_64-softmmu --enable-debug
-# Build in parallel - my system has 4 CPUs
-make -j 32
+# Build in parallel
+make -j 41
