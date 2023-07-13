@@ -28,4 +28,4 @@ git checkout v8.0.2
 # Configure QEMU for x86_64 only - faster build
 ./configure --target-list=x86_64-softmmu --enable-debug
 # Build in parallel
-make -j 41
+make -j
