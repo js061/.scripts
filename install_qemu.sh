@@ -6,7 +6,7 @@ sudo apt-get install -y git libglib2.0-dev libfdt-dev libpixman-1-dev zlib1g-dev
 sudo apt-get install -y libslirp0 libslirp-dev
 
 # Enable NUMA node binding
-sudo apt-get install -y libnuma-dev
+sudo apt-get install -y libnuma-dev libaio-dev libnfs-dev libseccomp-dev libcap-ng-dev libpmem-dev libvirt-dev
 
 # Clone QEMU
 git clone https://github.com/qemu/qemu.git
